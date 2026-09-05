@@ -1,6 +1,6 @@
 /* =====================================================
    AMANDHLOVU PHOTOGRAPHY
-   PREMIUM MOBILE-FIRST STYLES
+   PREMIUM PHOTOGRAPHY WEBSITE
    ===================================================== */
 
 * {
@@ -14,20 +14,30 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f8f7f4;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f7f5f0;
   color: #151515;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+body,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  font-family: inherit;
 }
 
 .container {
@@ -36,7 +46,9 @@ a {
 }
 
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+   ===================================================== */
 
 .header {
   position: fixed;
@@ -44,12 +56,14 @@ a {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(15, 15, 15, 0.96);
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(12px);
   color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav {
-  min-height: 72px;
+  min-height: 74px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,58 +71,68 @@ a {
 
 .logo {
   font-size: 20px;
+  line-height: 1;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
 .logo span {
   display: block;
-  font-size: 10px;
-  letter-spacing: 3px;
+  margin-top: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
   font-weight: 400;
   opacity: 0.65;
-  margin-top: -3px;
+}
+
+.menu-btn {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 nav {
   display: none;
   position: absolute;
-  top: 72px;
+  top: 74px;
   left: 0;
   width: 100%;
-  background: #111;
-  padding: 20px;
+  padding: 25px 5%;
+  background: #101010;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 nav.active {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
 nav a {
-  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.menu-btn {
-  border: 0;
-  background: transparent;
-  color: white;
-  font-size: 27px;
-  cursor: pointer;
+  opacity: 0.85;
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   position: relative;
   display: flex;
   align-items: center;
-  background-image: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=90");
+  background-image:
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90");
   background-size: cover;
   background-position: center;
   color: white;
@@ -117,7 +141,13 @@ nav a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.58);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.78),
+      rgba(0,0,0,0.38),
+      rgba(0,0,0,0.25)
+    );
 }
 
 .hero-content {
@@ -125,35 +155,39 @@ nav a {
   z-index: 2;
   width: min(900px, 90%);
   margin: auto;
-  padding-top: 60px;
+  padding-top: 75px;
 }
 
 .eyebrow,
 .section-label {
-  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
   letter-spacing: 3px;
   font-weight: 700;
   margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: clamp(48px, 13vw, 100px);
-  line-height: 0.95;
-  letter-spacing: -3px;
-  max-width: 800px;
+  max-width: 850px;
+  font-size: clamp(52px, 14vw, 105px);
+  line-height: 0.92;
+  letter-spacing: -4px;
+  font-weight: 700;
 }
 
 .hero h1 span,
 h2 span {
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
 }
 
 .hero-text {
-  max-width: 540px;
-  margin: 28px 0;
-  font-size: 17px;
-  opacity: 0.9;
+  max-width: 560px;
+  margin: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.88;
 }
 
 .hero-buttons {
@@ -162,17 +196,31 @@ h2 span {
   gap: 12px;
 }
 
+.hero-scroll {
+  position: absolute;
+  bottom: 25px;
+  left: 5%;
+  z-index: 3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  opacity: 0.65;
+}
 
-/* ================= BUTTONS ================= */
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
 
 .btn {
   display: inline-block;
-  padding: 14px 23px;
-  border-radius: 2px;
-  font-size: 12px;
+  padding: 15px 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
   font-weight: 700;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  border-radius: 1px;
   transition: 0.3s ease;
 }
 
@@ -182,7 +230,7 @@ h2 span {
 }
 
 .btn-light:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .btn-outline {
@@ -201,14 +249,16 @@ h2 span {
 }
 
 .btn-dark:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 
-/* ================= INTRO ================= */
+/* =====================================================
+   INTRO
+   ===================================================== */
 
 .intro {
-  padding: 80px 0;
+  padding: 90px 0;
   background: white;
 }
 
@@ -222,47 +272,52 @@ h2 span {
 .about-content h2,
 .contact h2,
 .cta h2 {
-  font-size: clamp(36px, 8vw, 64px);
+  font-size: clamp(38px, 9vw, 70px);
   line-height: 1.05;
-  letter-spacing: -2px;
+  letter-spacing: -2.5px;
 }
 
-.intro p,
-.about-content > p,
-.section-heading > p,
-.contact > p {
+.intro-grid > div:last-child {
+  font-family: Arial, Helvetica, sans-serif;
   color: #666;
+  font-size: 15px;
 }
 
 .text-link {
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 20px;
+  color: #111;
   font-weight: 700;
   border-bottom: 1px solid #111;
-  padding-bottom: 3px;
 }
 
 
-/* ================= SECTIONS ================= */
+/* =====================================================
+   SECTIONS
+   ===================================================== */
 
 .section {
-  padding: 90px 0;
+  padding: 95px 0;
 }
 
 .section-heading {
-  max-width: 700px;
-  margin-bottom: 45px;
+  max-width: 750px;
+  margin-bottom: 50px;
 }
 
 .section-heading > p:last-child {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777;
   margin-top: 20px;
 }
 
 
-/* ================= ABOUT ================= */
+/* =====================================================
+   ABOUT
+   ===================================================== */
 
 .about {
-  background: #eceae5;
+  background: #e9e6df;
 }
 
 .about-grid {
@@ -279,24 +334,25 @@ h2 span {
   object-fit: cover;
 }
 
-.about-content {
-  align-self: center;
-}
-
 .about-content h2 {
   margin-bottom: 25px;
 }
 
 .about-content > p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  font-size: 15px;
   margin-bottom: 18px;
 }
 
 .about-content .btn {
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 
-/* ================= SERVICES ================= */
+/* =====================================================
+   SERVICES
+   ===================================================== */
 
 .services {
   background: white;
@@ -305,33 +361,54 @@ h2 span {
 .service-grid {
   display: grid;
   gap: 1px;
-  background: #ddd;
+  background: #d9d7d2;
 }
 
 .service-card {
   background: white;
-  padding: 38px 30px;
+  padding: 40px 28px;
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
 }
 
 .service-number {
-  font-size: 12px;
-  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
   letter-spacing: 2px;
-  margin-bottom: 25px;
-  opacity: 0.5;
+  opacity: 0.45;
+  margin-bottom: 28px;
 }
 
 .service-card h3 {
-  font-size: 25px;
-  margin-bottom: 12px;
+  font-size: 27px;
+  line-height: 1.1;
+  margin-bottom: 15px;
 }
 
 .service-card p {
-  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #707070;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.service-card a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #111;
+  padding-bottom: 4px;
 }
 
 
-/* ================= GALLERY ================= */
+/* =====================================================
+   GALLERY
+   ===================================================== */
 
 .gallery {
   background: #111;
@@ -344,18 +421,21 @@ h2 span {
 }
 
 .gallery-heading > p {
-  color: #aaa;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #999;
+  font-size: 14px;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 7px;
 }
 
 .gallery-item {
   overflow: hidden;
   aspect-ratio: 1 / 1;
+  background: #222;
 }
 
 .gallery-item.large {
@@ -366,58 +446,65 @@ h2 span {
 .gallery-item img {
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.7s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 
-/* ================= WHY ================= */
+/* =====================================================
+   EXPERIENCE
+   ===================================================== */
 
 .why {
-  background: #f8f7f4;
+  background: #f7f5f0;
 }
 
 .why-grid {
   display: grid;
   gap: 1px;
-  background: #ddd;
+  background: #d9d7d2;
 }
 
 .why-grid > div {
-  background: #f8f7f4;
-  padding: 30px 25px;
+  background: #f7f5f0;
+  padding: 35px 25px;
 }
 
 .why-grid strong {
-  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
   letter-spacing: 2px;
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .why-grid h3 {
-  margin: 12px 0 8px;
-  font-size: 22px;
+  margin: 13px 0 8px;
+  font-size: 25px;
 }
 
 .why-grid p {
-  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #707070;
+  font-size: 14px;
 }
 
 
-/* ================= CTA ================= */
+/* =====================================================
+   CTA
+   ===================================================== */
 
 .cta {
   background: #171717;
   color: white;
-  padding: 100px 0;
+  padding: 110px 0;
   text-align: center;
 }
 
 .cta-content {
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .cta h2 {
@@ -425,12 +512,15 @@ h2 span {
 }
 
 .cta p:not(.section-label) {
+  font-family: Arial, Helvetica, sans-serif;
   color: #aaa;
   margin-bottom: 30px;
 }
 
 
-/* ================= CONTACT ================= */
+/* =====================================================
+   CONTACT
+   ===================================================== */
 
 .contact {
   background: white;
@@ -445,76 +535,98 @@ h2 span {
   margin-bottom: 22px;
 }
 
+.contact-grid > div:first-child > p:last-child {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777;
+  max-width: 500px;
+}
+
 .contact-details {
   border-top: 1px solid #ddd;
 }
 
 .contact-item {
-  padding: 23px 0;
+  padding: 24px 0;
   border-bottom: 1px solid #ddd;
 }
 
 .contact-item small {
   display: block;
-  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
   letter-spacing: 2px;
   font-weight: 700;
   margin-bottom: 6px;
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
 .contact-item a {
-  font-size: 19px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
   font-weight: 600;
 }
 
 .contact-item p {
+  font-family: Arial, Helvetica, sans-serif;
   color: #666;
 }
 
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 .footer {
-  background: #111;
+  background: #0d0d0d;
   color: white;
-  padding: 35px 0;
+  padding: 40px 0;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .footer h3 {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .footer p {
-  color: #888;
-  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777;
+  font-size: 12px;
 }
 
 
-/* ================= WHATSAPP ================= */
+/* =====================================================
+   WHATSAPP
+   ===================================================== */
 
 .whatsapp {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
+  right: 17px;
+  bottom: 17px;
   z-index: 999;
   background: #25d366;
   color: white;
-  padding: 13px 17px;
+  padding: 13px 18px;
   border-radius: 50px;
-  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
   font-weight: 700;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: translateY(-3px);
 }
 
 
-/* ================= TABLET ================= */
+/* =====================================================
+   TABLET
+   ===================================================== */
 
 @media (min-width: 700px) {
 
@@ -528,12 +640,13 @@ h2 span {
     width: auto;
     padding: 0;
     background: transparent;
+    border: 0;
     flex-direction: row;
-    gap: 25px;
+    gap: 28px;
   }
 
   nav a {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .intro-grid {
@@ -559,15 +672,12 @@ h2 span {
     align-items: center;
   }
 
-  .gallery-heading {
-    grid-template-columns: 1fr 0.5fr;
-    align-items: end;
-  }
-
 }
 
 
-/* ================= DESKTOP ================= */
+/* =====================================================
+   DESKTOP
+   ===================================================== */
 
 @media (min-width: 1000px) {
 
@@ -575,16 +685,17 @@ h2 span {
     min-height: 82px;
   }
 
-  nav {
-    gap: 32px;
-  }
-
   .hero-content {
-    padding-top: 80px;
+    padding-top: 90px;
   }
 
   .section {
-    padding: 120px 0;
+    padding: 125px 0;
+  }
+
+  .gallery-heading {
+    grid-template-columns: 1fr 0.5fr;
+    align-items: end;
   }
 
   .gallery-grid {
@@ -601,4 +712,4 @@ h2 span {
     aspect-ratio: 1 / 1;
   }
 
-    }
+     }
