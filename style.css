@@ -1,8 +1,3 @@
-/* =====================================================
-   AMANDHLOVU PHOTOGRAPHY
-   PREMIUM PORTFOLIO STYLES
-   ===================================================== */
-
 :root {
   --black: #111111;
   --dark: #181818;
@@ -14,11 +9,6 @@
   --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
 }
-
-
-/* =========================
-   RESET
-========================= */
 
 * {
   margin: 0;
@@ -53,11 +43,6 @@ a {
 button {
   font: inherit;
 }
-
-
-/* =========================
-   GLOBAL
-========================= */
 
 .container {
   width: min(1180px, 90%);
@@ -101,9 +86,7 @@ p {
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .site-header {
   position: fixed;
@@ -172,14 +155,8 @@ p {
   border-bottom: 1px solid #292929;
 }
 
-.nav-menu a:hover {
-  opacity: .65;
-}
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
   min-height: 100vh;
@@ -264,6 +241,16 @@ p {
   color: #111;
 }
 
+.btn-dark {
+  background: #111;
+  color: white;
+}
+
+.btn-dark:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
 .hero-scroll {
   position: absolute;
   bottom: 35px;
@@ -286,9 +273,7 @@ p {
 }
 
 
-/* =========================
-   INTRO
-========================= */
+/* INTRO */
 
 .intro {
   padding: 100px 0;
@@ -319,9 +304,7 @@ p {
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about {
   background: white;
@@ -381,9 +364,7 @@ p {
 }
 
 
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 
 .services {
   background: var(--cream);
@@ -441,9 +422,7 @@ p {
 }
 
 
-/* =========================
-   PORTFOLIO
-========================= */
+/* PORTFOLIO */
 
 .portfolio {
   background: var(--dark);
@@ -520,9 +499,7 @@ p {
 }
 
 
-/* =========================
-   PROCESS
-========================= */
+/* PROCESS */
 
 .process {
   background: white;
@@ -558,9 +535,7 @@ p {
 }
 
 
-/* =========================
-   CTA
-========================= */
+/* CTA */
 
 .cta {
   min-height: 620px;
@@ -597,9 +572,7 @@ p {
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact {
   background: var(--cream);
@@ -641,14 +614,49 @@ p {
   color: #222;
 }
 
-.contact-details .btn {
+
+/* SOCIAL MEDIA */
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 0;
+  border-bottom: 1px solid var(--line);
+  transition: .3s ease;
+}
+
+.social-link:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.social-link span {
+  font-family: var(--serif);
+  font-size: 22px;
+}
+
+.social-link small {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.social-link:hover {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.contact-details > .btn {
   margin-top: 28px;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer {
   background: #111;
@@ -688,9 +696,7 @@ p {
 }
 
 
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp-float {
   position: fixed;
@@ -713,9 +719,7 @@ p {
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media (min-width: 700px) {
 
@@ -794,9 +798,7 @@ p {
 }
 
 
-/* =========================
-   DESKTOP
-========================= */
+/* DESKTOP */
 
 @media (min-width: 1000px) {
 
